@@ -6,12 +6,10 @@ import warnings
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
-
-# Suppress warnings as in the Colab code
 warnings.filterwarnings('ignore')
 
 def load_data(file_path):
-    data = pd.read_csv(file_path)
+    data = pd.read_csv("/content/fraud detection.csv")
     return data
 
 def preprocess_data(data):
@@ -62,8 +60,8 @@ def explore_data(data):
     le = LabelEncoder()
     data['type'] = le.fit_transform(data['type'])
     print("\nUnique transaction types (encoded):", data['type'].unique())
-    
-    # Correlation heatmap (excluding 'isFraud')
+
+     # Correlation heatmap (excluding 'isFraud')
     corr_matrix = data.drop(columns=['isFraud']).corr()
     plt.figure(figsize=(8, 6))
     sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
