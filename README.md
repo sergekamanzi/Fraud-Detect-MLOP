@@ -1,7 +1,7 @@
 # Fraud-Detect-MLOP
 video = 
 
-website link = 
+website link = https://fraudent-web-page.vercel.app/
 
 api swagger UI= https://fraud-backend-283k.onrender.com/docs
 
