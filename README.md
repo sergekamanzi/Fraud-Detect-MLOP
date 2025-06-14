@@ -1,5 +1,5 @@
 # Fraud-Detect-MLOP
-video = https://www.youtube.com/watch?v=A1gqcCzjGMQ
+
 
 website link = https://fraudent-web-page.vercel.app/
 
